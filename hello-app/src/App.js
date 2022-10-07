@@ -8,18 +8,20 @@ import NavSite from './components/navbar';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import {BrowserRouter, Routes, Route, Link} from 'react-router-dom';
 
-export default function App() {
-  return (
-    <div>
-      <NavSite></NavSite> 
-      <Routes>
-        <Route path="/" element={<Home/>}/>
-        <Route path="home" element={<Home/>}/>
-        <Route path="read" element={<Read/>}/>
-        <Route path="create" element={<Create/>}/>
-      </Routes>
-    </div>
-  );
+export default class App extends React.Component {
+  render(){
+    return (
+      <div>
+        <NavSite></NavSite> 
+        <Routes>
+          <Route path="/" element={<Home/>}/>
+          <Route path="home" element={<Home/>}/>
+          <Route path="read" element={<Read/>}/>
+          <Route path="create" element={<Create/>}/>
+        </Routes>
+      </div>
+    );
+  }
 }
 
 function Home(){
